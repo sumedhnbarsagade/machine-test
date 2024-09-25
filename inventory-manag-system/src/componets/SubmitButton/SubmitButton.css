@@ -1,7 +1,4 @@
 /* dummy css */
-.btn-comp {
-    margin-bottom: 100px;
-}
 
 button.save-btn {
     background-color: #007Aff;
@@ -17,7 +14,7 @@ button.save-btn {
     cursor: pointer;
 }
 .btn-comp {
-    margin-bottom: 100px;
+    margin-bottom: 25px;
     /* margin: 0 auto; */
     display: flex;
     justify-content: center;
