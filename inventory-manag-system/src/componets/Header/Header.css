@@ -1,0 +1,27 @@
+nav.header-navbar {
+    background-color: #007AFF;
+    padding: 10px;
+    /* flex-direction: row;
+    display: flex; */
+    color: #fff;
+    /* align-items: center; */
+}
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+.Logo{
+    height: 35px;
+    width: 35px;
+}
+.menu-list {
+    float: right;
+    margin-top: -23px;
+    text-decoration: none;
+}
+.menu{
+    list-style: none;
+}
+.head{
+    padding-left: 10px;
+}
