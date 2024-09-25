@@ -39,14 +39,14 @@ function GetSupplierData() {
       <h2>Supplier Data</h2>
       {error && <p>{error}</p>}
 
-      {/* Table to display supplier data */}
+
       <div className="data-table">
       <table border="1" cellPadding="5" cellSpacing="0">
         <thead>
           <tr>
             <th>Supplier</th>
-            <th>Item Name</th> {/* Placeholder field */}
-            <th>Quantity</th>   {/* Placeholder field */}
+            <th>Item Name</th>
+            <th>Quantity</th>   
             <th>City</th>
             <th>Country</th>
             <th>Email</th>
@@ -54,12 +54,11 @@ function GetSupplierData() {
           </tr>
         </thead>
         <tbody>
-          {/* Map through supplier data and render rows */}
           {suppliers.length > 0 ? (
             suppliers.map((supplier) => (
               <tr key={supplier.supplierId}>
                 <td>{supplier.supplierName}</td>
-                {/* Placeholder fields for itemName and quantity */}
+  
                 <td>N/A</td> 
                 <td>N/A</td>
                 <td>{supplier.cityName}</td>
