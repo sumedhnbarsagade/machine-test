@@ -5,6 +5,7 @@ import Item from './componets/Item/Item';
 import ItemInputForm from './componets/ItemForms/ItemInputForm';
 import SupplierForm from './componets/SupplierForm/SupplierForm';
 import SubmitButton from './componets/SubmitButton/SubmitButton';
+import InventoryData from './componets/InventoryData/InventoryData';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <ItemInputForm/>
       <SupplierForm/>
       <SubmitButton/>
+      <InventoryData/>
     </div>
   );
 }

@@ -1,0 +1,23 @@
+.data-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+table {
+    /* font-family: arial, sans-serif; */
+    border-collapse: collapse;
+    /* width: 100%; */
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  /* tr:nth-child(even) {
+    background-color: #dddddd;
+  } */

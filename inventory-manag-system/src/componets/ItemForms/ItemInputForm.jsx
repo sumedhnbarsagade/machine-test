@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./ItemInputForm.css";
 
 function ItemInputForm() {
+
+  const [itemName, setitemName] = useState('');
+  const [unit, setUnit] = useState('')
+  const [error, setError] = useState('')
+
+  function handleChange(e) {
+    const value = e.target.value;
+    if(value.length <= 255){
+      setitemName(value);
+      setError("");
+    }
+    else{
+      setError("Not more than 225 characters")
+    }
+  }
+
   return (
     <div>
       <h2>Item Details</h2>
@@ -16,7 +32,13 @@ function ItemInputForm() {
                 type="text"
                 placeholder="Enter item name"
                 className="items-form-input"
+                onChange={handleChange}
+                value={itemName}
               />
+              {
+                error && <p style={{color: 'red'}}>{error}</p>
+              }
+              <p>{itemName.length}</p>
               <div className="messege">
                 <p className="input-val">Max 50 characters</p>
               </div>
@@ -45,7 +67,7 @@ function ItemInputForm() {
                   className="items-form-input"
                 />
                 <div className="messege">
-                  <p className="input-val">Max 50 characters</p>
+                  <p className="input-val">Numeric value (USD)</p>
                 </div>
               </div>
               <div className="item-date input-tab">

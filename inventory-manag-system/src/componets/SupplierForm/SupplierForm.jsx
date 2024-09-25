@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./SupplierForm.css";
 
 function SupplierForm() {
+
+  const [countries, setCountries] = useState([]);
+  const [selectCountry, setCountry] = useState('')
+
+  useEffect(() => {
+      const fetchCountryData = async () => {
+        try {
+          const response = await 
+          fetch("https://apis-technical-test.conqt.com/Api/countrystatecity/Get-All-CountryList");
+          const data = await response.json();
+          console.log(data);
+          
+          setCountries(data)
+        } catch (error) {
+          console.log("Error", error);
+          
+        }
+      }
+      fetchCountryData();
+  },[])
+
   return (
     <div>
       <h2>Supplier Details</h2>
@@ -39,11 +60,19 @@ function SupplierForm() {
             <div className="item-price input-tab">
               <label>Country</label>
               <br />
-              <input
-                type="text"
-                placeholder="Enter unit price"
-                className="items-form-input"
-              />
+              <select value={selectCountry}
+              >
+                {/* <option value="">--Select--</option>
+                {
+                  countries.map((country) => (
+                    <option key={country.name}
+                    value={country.}>
+                      {country.name}
+                    </option>
+                  ))
+                } */}
+
+              </select>
               <div className="messege">
                 <p className="input-val">Select country from the list</p>
               </div>
@@ -52,7 +81,7 @@ function SupplierForm() {
               <label>State</label>
               <br />
               <input
-                type="date"
+                type="text"
                 placeholder="select date"
                 className="items-form-input"
               />
