@@ -1,5 +1,17 @@
-.checkbox-item{
+.checkbox-item {
+    padding: 25px 25px;
+}
+.checkbox-label {
+    /* margin: 0 auto; */
     display: flex;
     justify-content: center;
-    padding: 25px;
+}
+label.checkbox-container {
+    padding: 12px;
+}
+.item-form-check {
+    margin-top: 25px;
+}
+.supplier form-check{
+    margin-top: 25px;
 }

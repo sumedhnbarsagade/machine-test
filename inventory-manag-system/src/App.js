@@ -5,17 +5,17 @@ import Item from './componets/Item/Item';
 import ItemInputForm from './componets/ItemForms/ItemInputForm';
 import SupplierForm from './componets/SupplierForm/SupplierForm';
 import SubmitButton from './componets/SubmitButton/SubmitButton';
-import InventoryData from './componets/InventoryData/InventoryData';
+import GetSupplierData from './componets/SupplierData/GetSupplierData';
 
 function App() {
   return (
     <div className="App">
       <Header/>
       <Item/>
-      <ItemInputForm/>
-      <SupplierForm/>
+      {/* <ItemInputForm/>
+      <SupplierForm/> */}
       <SubmitButton/>
-      <InventoryData/>
+      <GetSupplierData/>
     </div>
   );
 }
